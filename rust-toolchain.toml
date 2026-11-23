@@ -1,0 +1,4 @@
+# shortcut: pinned because Cargo 1.100's new build-dir layout (target/<profile>/build/<pkg>/<hash>)
+# breaks tauri-build 2.6's sidecar copy (tauri-apps/tauri#14790); unpin once tauri-build supports it.
+[toolchain]
+channel = "1.95.0"
