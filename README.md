@@ -1,49 +1,33 @@
-<div align="center">
-  <img src="assets/readme/hero.svg" alt="Mythos Desktop — the Tauri + React client where novelists write" width="100%" />
-</div>
-
-# Mythos Desktop (`mythoside-ts`)
-
-[![License: FSL-1.1-ALv2](https://img.shields.io/badge/license-FSL--1.1--ALv2-C9A24B)](./LICENSE.md)
-
-<p align="center">English · <a href="./README.TR.md">Türkçe</a></p>
-
 <p align="center">
-  <a href="https://github.com/mythoside">Ecosystem</a>
-  &nbsp;·&nbsp;
-  <a href="https://github.com/mythoside/mythoside-core">Core engine</a>
-  &nbsp;·&nbsp;
-  <a href="https://github.com/mythoside/mythoside-website">Website</a>
+  <img src="assets/readme/hero.svg" width="100%" alt="Mythos Desktop: the series tree with a chapter open, the chapter text, and a character card listing the chapters that mention her">
 </p>
 
-The desktop client for **Mythos** — the calm, editor-like surface where novelists actually write. It's a Tauri + React + TypeScript app that hosts the [`mythoside-core`](https://github.com/mythoside/mythoside-core) Rust engine as a managed **sidecar** and proxies to it, so all the heavy lifting (parsing, file watching, relationships) stays in the engine and this repo stays focused on the interface.
+<p align="center">
+  <a href="https://github.com/mythoside">Mythos</a> · <a href="https://github.com/mythoside/mythoside-core">Engine</a> · <a href="https://mythoside.com">mythoside.com</a> · English · <a href="./README.TR.md">Türkçe</a>
+</p>
 
-> **Status:** early development. The UI is being rebuilt; expect rough edges.
+<p align="center">
+  <a href="./LICENSE.md"><img src="https://img.shields.io/badge/license-FSL--1.1--ALv2-A35A3C" alt="License: FSL-1.1-ALv2"></a>
+</p>
+
+The desktop app for [Mythos](https://github.com/mythoside), where you write. It shows a series as a tree of books and chapters, gives you an editor for each chapter, and keeps pages for characters, locations and timeline notes next to them. A character's page lists the chapters that mention them.
+
+The app doesn't touch your files itself. It starts the [`mythoside-core`](https://github.com/mythoside/mythoside-core) engine as a sidecar process and asks it for everything over stdin and stdout.
+
+> **Early development.** The interface is being rebuilt, so screens and behaviour will change.
 
 ## How it fits together
 
 ```text
-mythoside-ts (this repo)          mythoside-core (sidecar)
-┌───────────────────────┐  stdio  ┌────────────────────────┐
-│  React 19 UI + editor │ ◂─────▸ │  Rust engine, no port   │
-│  Tauri shell          │  JSON   │  Markdown + YAML on disk│
-└───────────────────────┘  -RPC   └────────────────────────┘
+mythoside-ts (this repo)              mythoside-core (sidecar)
+React UI  →  Tauri commands  ── stdio, one JSON line per message ──>  Rust engine
+                                                                        │
+                                                       Markdown + YAML files on your disk
 ```
 
-The engine never opens a network port — the app talks to it over standard input/output, so your world stays a private local process.
+## Run it
 
-## Stack
-
-| Layer | Tooling |
-| --- | --- |
-| Shell | Tauri 2 |
-| UI | React 19, TypeScript, Tailwind CSS v4 |
-| Build | Vite |
-| Data | Proxies to the local `mythoside-core` binary via a managed sidecar |
-
-## Run locally
-
-You'll need Node.js, npm, Rust, and the [Tauri prerequisites](https://tauri.app/start/prerequisites/) for your platform.
+You need Node.js, npm, Rust and the [Tauri prerequisites](https://tauri.app/start/prerequisites/) for your platform.
 
 ```bash
 git clone https://github.com/mythoside/mythoside-ts.git
@@ -52,17 +36,34 @@ npm install
 npm run tauri dev
 ```
 
-## Project layout
+The first run clones and builds `mythoside-core` (see `scripts/prepare-sidecar.mjs`), so it takes a few minutes.
+
+## Stack
+
+| Layer | Tooling |
+| --- | --- |
+| Shell | Tauri 2 |
+| UI | React 19, TypeScript, Zustand |
+| Editor | BlockNote |
+| Build | Vite+ |
+| Engine | `mythoside-core`, bundled as a sidecar binary |
+
+## Layout
 
 ```text
-src/         React frontend — components, hooks, editor surface
-src-tauri/   Tauri setup, sidecar management, and the Rust ↔ TS bridge
+src/views/          one view per screen: series, books, chapters, characters, locations, timeline
+src/state/          series store and navigation
+src/lib/            editor schema, character mentions, theme
+src-tauri/src/      Tauri commands and the client that talks to the engine
+scripts/            prepare-sidecar.mjs builds the engine binary for Tauri
 ```
+
+## Pricing
+
+Free while in development. From version 1.0, Mythos is a one-time purchase that includes a year of updates. The version you bought keeps working after that, and renewing is optional. Building it yourself from this repository stays free.
 
 ## License
 
-Source-available under the [Functional Source License, v1.1 (ALv2 Future License)](./LICENSE.md) — use, read, modify, and self-host it for your own writing; you just can't repackage it as a competing product. Each release converts to Apache 2.0 two years after publication.
+Source-available under the [Functional Source License 1.1, ALv2 Future License](./LICENSE.md). You can use, read, modify and self-host it. You can't offer it as a competing commercial product or service. Each release becomes Apache 2.0 two years after it ships. The Mythos name and logo are not covered by the license.
 
-## Contributing & security
-
-See [CONTRIBUTING.md](https://github.com/mythoside/.github/blob/main/CONTRIBUTING.md) and [SECURITY.md](https://github.com/mythoside/.github/blob/main/SECURITY.md).
+[Contributing](https://github.com/mythoside/.github/blob/main/CONTRIBUTING.md) · [Security](https://github.com/mythoside/.github/blob/main/SECURITY.md) · [Discussions](https://github.com/mythoside/mythoside-core/discussions)
