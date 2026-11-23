@@ -9,14 +9,14 @@
 <p align="center"><a href="./README.md">English</a> · Türkçe</p>
 
 <p align="center">
-  <a href="https://github.com/Mythos-IDE">Ekosistem</a>
+  <a href="https://github.com/mythoside">Ekosistem</a>
   &nbsp;·&nbsp;
-  <a href="https://github.com/Mythos-IDE/mythoside-core">Çekirdek motor</a>
+  <a href="https://github.com/mythoside/mythoside-core">Çekirdek motor</a>
   &nbsp;·&nbsp;
-  <a href="https://github.com/Mythos-IDE/mythoside-website">Web sitesi</a>
+  <a href="https://github.com/mythoside/mythoside-website">Web sitesi</a>
 </p>
 
-**Mythos**'nin masaüstü istemcisi — romancıların fiilen yazdığı, editör benzeri sakin yüzey. [`mythoside-core`](https://github.com/Mythos-IDE/mythoside-core) Rust motorunu yönetilen bir **sidecar** olarak barındıran ve ona proxy yapan bir Tauri + React + TypeScript uygulamasıdır; böylece ağır iş (ayrıştırma, dosya izleme, ilişkiler) motorda kalır ve bu repo arayüze odaklı kalır.
+**Mythos**'nin masaüstü istemcisi — romancıların fiilen yazdığı, editör benzeri sakin yüzey. [`mythoside-core`](https://github.com/mythoside/mythoside-core) Rust motorunu yönetilen bir **sidecar** olarak barındıran ve ona proxy yapan bir Tauri + React + TypeScript uygulamasıdır; böylece ağır iş (ayrıştırma, dosya izleme, ilişkiler) motorda kalır ve bu repo arayüze odaklı kalır.
 
 > **Durum:** erken geliştirme aşaması. Arayüz yeniden inşa ediliyor; eksikler olabilir.
 
@@ -46,7 +46,7 @@ Motor asla bir ağ portu açmaz — uygulama onunla standart girdi/çıktı üze
 Node.js, npm, Rust ve platformunuza uygun [Tauri ön koşulları](https://tauri.app/start/prerequisites/) gerekir.
 
 ```bash
-git clone https://github.com/Mythos-IDE/mythoside-ts.git
+git clone https://github.com/mythoside/mythoside-ts.git
 cd mythoside-ts
 npm install
 npm run tauri dev
@@ -65,4 +65,4 @@ src-tauri/   Tauri kurulumu, sidecar yönetimi ve Rust ↔ TS köprüsü
 
 ## Katkı ve Güvenlik
 
-[CONTRIBUTING.md](https://github.com/Mythos-IDE/.github/blob/main/CONTRIBUTING.md) ve [SECURITY.md](https://github.com/Mythos-IDE/.github/blob/main/SECURITY.md) belgelerine bakın.
+[CONTRIBUTING.md](https://github.com/mythoside/.github/blob/main/CONTRIBUTING.md) ve [SECURITY.md](https://github.com/mythoside/.github/blob/main/SECURITY.md) belgelerine bakın.

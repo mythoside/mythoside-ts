@@ -2067,7 +2067,7 @@ dependencies = [
 [[package]]
 name = "mythoside-core"
 version = "0.1.0"
-source = "git+https://github.com/Mythos-IDE/mythoside-core?branch=main#c2b0168fdf7152a2048359c08fcc9b89e9a19f73"
+source = "git+https://github.com/mythoside/mythoside-core?branch=main#c2b0168fdf7152a2048359c08fcc9b89e9a19f73"
 dependencies = [
  "chrono",
  "dirs",

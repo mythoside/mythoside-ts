@@ -9,14 +9,14 @@
 <p align="center">English · <a href="./README.TR.md">Türkçe</a></p>
 
 <p align="center">
-  <a href="https://github.com/Mythos-IDE">Ecosystem</a>
+  <a href="https://github.com/mythoside">Ecosystem</a>
   &nbsp;·&nbsp;
-  <a href="https://github.com/Mythos-IDE/mythoside-core">Core engine</a>
+  <a href="https://github.com/mythoside/mythoside-core">Core engine</a>
   &nbsp;·&nbsp;
-  <a href="https://github.com/Mythos-IDE/mythoside-website">Website</a>
+  <a href="https://github.com/mythoside/mythoside-website">Website</a>
 </p>
 
-The desktop client for **Mythos** — the calm, editor-like surface where novelists actually write. It's a Tauri + React + TypeScript app that hosts the [`mythoside-core`](https://github.com/Mythos-IDE/mythoside-core) Rust engine as a managed **sidecar** and proxies to it, so all the heavy lifting (parsing, file watching, relationships) stays in the engine and this repo stays focused on the interface.
+The desktop client for **Mythos** — the calm, editor-like surface where novelists actually write. It's a Tauri + React + TypeScript app that hosts the [`mythoside-core`](https://github.com/mythoside/mythoside-core) Rust engine as a managed **sidecar** and proxies to it, so all the heavy lifting (parsing, file watching, relationships) stays in the engine and this repo stays focused on the interface.
 
 > **Status:** early development. The UI is being rebuilt; expect rough edges.
 
@@ -46,7 +46,7 @@ The engine never opens a network port — the app talks to it over standard inpu
 You'll need Node.js, npm, Rust, and the [Tauri prerequisites](https://tauri.app/start/prerequisites/) for your platform.
 
 ```bash
-git clone https://github.com/Mythos-IDE/mythoside-ts.git
+git clone https://github.com/mythoside/mythoside-ts.git
 cd mythoside-ts
 npm install
 npm run tauri dev
@@ -65,4 +65,4 @@ Source-available under the [Functional Source License, v1.1 (ALv2 Future License
 
 ## Contributing & security
 
-See [CONTRIBUTING.md](https://github.com/Mythos-IDE/.github/blob/main/CONTRIBUTING.md) and [SECURITY.md](https://github.com/Mythos-IDE/.github/blob/main/SECURITY.md).
+See [CONTRIBUTING.md](https://github.com/mythoside/.github/blob/main/CONTRIBUTING.md) and [SECURITY.md](https://github.com/mythoside/.github/blob/main/SECURITY.md).

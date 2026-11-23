@@ -21,7 +21,7 @@ import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
 
 const rootDir = dirname(dirname(fileURLToPath(import.meta.url)));
-const CORE_REPO = "https://github.com/Mythos-IDE/mythoside-core.git";
+const CORE_REPO = "https://github.com/mythoside/mythoside-core.git";
 const CORE_BRANCH = "main";
 const coreCheckoutDir = join(rootDir, ".mythoside-core-src");
 
