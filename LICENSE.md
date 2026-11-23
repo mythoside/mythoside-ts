@@ -6,7 +6,7 @@ FSL-1.1-ALv2
 
 ## Notice
 
-Copyright 2026 MythosIDE
+Copyright 2026 Barış Salih Babacan
 
 ## Terms and Conditions
 
@@ -82,8 +82,8 @@ EVEN IF WE HAVE BEEN INFORMED OF THEIR POSSIBILITY IN ADVANCE.
 
 Except for displaying the License Details and identifying us as the origin of
 the Software, you have no right under these Terms and Conditions to use our
-trademarks, trade names, service marks or product names. "MythosIDE" and the
-MythosIDE logo are trademarks of the Licensor and are not licensed under these
+trademarks, trade names, service marks or product names. "Mythos" and the
+Mythos logo are trademarks of the Licensor and are not licensed under these
 Terms and Conditions.
 
 ## Grant of Future License
