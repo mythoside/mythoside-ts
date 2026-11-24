@@ -60,7 +60,7 @@ scripts/            prepare-sidecar.mjs, Tauri için motor binary'sini derler
 
 ## Fiyat
 
-Geliştirme süresince ücretsiz. 1.0 sürümüyle birlikte Mythos, bir yıllık güncellemeyi içeren tek seferlik bir satın alma olacak. Satın aldığın sürüm sonrasında da çalışmaya devam eder; yenilemek isteğe bağlı. Bu repodan kendin derlemek ücretsiz kalır.
+Geliştirme süresince ücretsiz. İlk sürümle birlikte Mythos, bir yıllık güncellemeyi içeren tek seferlik bir satın alma olacak. Satın aldığın sürüm sonrasında da çalışmaya devam eder; yenilemek isteğe bağlı. Bu repodan kendin derlemek ücretsiz kalır.
 
 ## Lisans
 

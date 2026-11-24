@@ -60,7 +60,7 @@ scripts/            prepare-sidecar.mjs builds the engine binary for Tauri
 
 ## Pricing
 
-Free while in development. From version 1.0, Mythos is a one-time purchase that includes a year of updates. The version you bought keeps working after that, and renewing is optional. Building it yourself from this repository stays free.
+Free while in development. From the first release, Mythos is a one-time purchase that includes a year of updates. The version you bought keeps working after that, and renewing is optional. Building it yourself from this repository stays free.
 
 ## License
 
